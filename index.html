@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html style="background-color:powderblue;">
+<script src="./catalog.js"></script>
     <head>
-        YES
+        <h1 id="yes">YES</h1>
+        
+        <button type="button" onclick="loadDoc()">Or</button>
+        
     </head>
+
+    <div>        
+        <p id="item0"></p>
+        <p id="item1"></p>
+        <p id="item2"></p>
+        <p id="item3"></p>
+        <p id="item4"></p>
+        <p id="item5"></p>
+    </div>
+    <div>
+        <button type="button" id="prev" onclick="pageNumber('minus')">Prev</button>
+        <button type="button" id="next" onclick="pageNumber('plus')">Next</button>
+        <div id="page">0</div>
+    </div>
 </html>
