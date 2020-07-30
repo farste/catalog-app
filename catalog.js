@@ -8,7 +8,7 @@ const host = "https://www.googleapis.com/books/v1/volumes"
 }); */
 
 
-function loadDoc() {
+function loadDoc(search = "bear") {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -21,7 +21,8 @@ function loadDoc() {
       }
     };
     sIndex = pNumber * 6;
-    xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes?q=bear&startIndex=${sIndex}`, true);
+    search = document.getElementById("search").value
+    xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes?q=${search}&startIndex=${sIndex}`, true);
     xhttp.send();
   }
 
